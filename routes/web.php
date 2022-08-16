@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::resource('cadastro', 'App\Http\Controllers\UserController');
+
+Route::get('/login', function () {
+    return 'Login';
+})->name('login');
 /*
 |--------------------------------------------------------------------------
 | Web Routes
