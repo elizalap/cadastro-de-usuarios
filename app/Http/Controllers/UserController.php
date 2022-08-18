@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreUpdateUserRequest;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -18,7 +19,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return "Listagem dos usuários";
+        return view('admin.pages.users.index');
     }
 
     /**
@@ -34,10 +35,10 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\StoreUpdateUserRequest;
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreUpdateUserRequest $request)
     {
         //
     }
