@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreUpdateUserRequest;
+use App\Models\UserOcc;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -29,7 +30,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.users.index');
     }
 
     /**
@@ -40,7 +41,11 @@ class UserController extends Controller
      */
     public function store(StoreUpdateUserRequest $request)
     {
-        //
+        $data = $request->only('name', 'email');
+
+        UserOcc::create($data);
+
+        return redirect()->route('users.thank-you');
     }
 
     /**
