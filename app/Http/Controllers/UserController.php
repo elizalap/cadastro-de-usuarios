@@ -45,7 +45,7 @@ class UserController extends Controller
 
         UserOcc::create($data);
 
-        return redirect()->route('users.thank-you');
+        return view('admin.pages.users.thank-you');
     }
 
     /**

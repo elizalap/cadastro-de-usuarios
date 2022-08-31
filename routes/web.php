@@ -21,7 +21,3 @@ Route::get('/login', function () {
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/thank-you', function () {
-    return view('admin.pages.users.thank-you');
-});
