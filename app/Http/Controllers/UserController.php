@@ -41,7 +41,7 @@ class UserController extends Controller
      */
     public function store(StoreUpdateUserRequest $request)
     {
-        $data = $request->only('name', 'email');
+        $data = $request->only('nome', 'sobrenome', 'email');
 
         UserOcc::create($data);
 

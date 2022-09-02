@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserOcc extends Model
 {
-    protected $fillable = ['name', 'email'];
+    protected $fillable = ['nome', 'sobrenome', 'email'];
 }

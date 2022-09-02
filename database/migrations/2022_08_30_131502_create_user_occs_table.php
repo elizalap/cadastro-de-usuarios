@@ -15,7 +15,8 @@ class CreateUserOccsTable extends Migration
     {
         Schema::create('user_occs', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('nome');
+            $table->string('sobrenome');
             $table->string('email')->unique();
             $table->timestamps();
         });

@@ -25,7 +25,8 @@ class StoreUpdateUserRequest extends FormRequest
     {
         $id = $this->segment(2);
         return [
-            'name' => 'required|min:3|max:255|',
+            'nome' => 'required|min:3|max:100|',
+            'sobrenome' => 'required|min:3|max:100',
             'email' => 'required|min:3|max:10000',
         ];
     }
@@ -33,9 +34,12 @@ class StoreUpdateUserRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'Nome é obrigatório',
-            'name.min' => "Ops! Precisa informar pelo menos 3 caracteres",
-            'email.required' => "O e-mail é obrigatório."
+            'nome.required' => 'Nome é obrigatório.',
+            'nome.min' => "Ops! Em 'Nome' é preciso informar pelo menos 3 caracteres.",
+            'sobrenome.required' => 'Sobrenome é obrigatório.',
+            'sobrenome.min' => "Ops! Em 'Sobrenome' é preciso informar pelo menos 3 caracteres.",
+            'email.required' => "O e-mail é obrigatório.",
+            'email.min' => "Ops! Em 'E-mail' é preciso informar pelo menos 3 caracteres.",
         ];
     }
 }
